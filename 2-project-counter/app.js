@@ -1,4 +1,4 @@
-//set intial value
+//set intial value 0
 let count=0;
 
 let value=document.getElementById("num");
