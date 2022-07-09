@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.header{
+    padding: 0 2.8rem;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e7f5ff;
+}
+.navbar-list{
+    display: flex;
+    /* float: right; */
+    gap: 2rem;
+}
+.logo{
+    height: 5rem;
+    width: 5rem;
+}
+.nav-icon{
+    height: 4rem;
+    width: 4rem;
+}
+
+.navbar-btn{
+    display: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav-icon[name="close-outline"]{
+    display: none;
+}
+
+li{
+    list-style: none;
+}
+
+li a{
+    text-decoration: none;
+    font-size: 1.9rem;
+    padding: 1rem;
+    color: black;
+}
+.section-hero{
+    display: flex;
+    height: 50rem;
+    justify-content: center;
+    align-items: center;
+}
+#her{
+    background-color: aqua;
+    font-size: 1.9rem;
+}
+#serv{
+    background-color:antiquewhite;
+    font-size: 1.9rem;
+}
+
+/* ========================================
+    responsive codes
+   ======================================== */
+
+
+@media(max-width:42em)
+{
+    .navbar-btn{
+        display: block;
+        z-index: 999;
+        border: 3px solid grey;
+
+    }
+    .navbar{
+        /* display: none; */
+        width: 100%;
+        height: 100vh;
+        background-color: #e7f5ff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .navbar-list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .active .navbar{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    
+    }
+    .active .navbar-btn .nav-icon[name="close-outline"]{
+        display: block;
+    }
+
+    .active .navbar-btn .nav-icon[name="menu-outline"]{
+        display: none;
+    }
+
+}
