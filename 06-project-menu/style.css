@@ -21,6 +21,7 @@
 .filter-button{
     height: 30px;
     width: 70px;
+    border-radius: 5px;
 }
 .section-center{
     display: grid;
@@ -30,6 +31,7 @@
 .menu-item{
     display: flex;
     border: solid gray 2px;
+    border-radius: 10px;
     align-items: center;
     justify-content: center;
     /* padding: 5px; */
